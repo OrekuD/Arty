@@ -11,10 +11,7 @@ import SwiftUI
 struct FontFamilies {
     static let regular: String = "DMSans-Regular"
     static let bold: String = "DMSans-Bold"
-    static let boldItalic: String = "DMSans-BoldItalic"
-    static let italic: String = "DMSans-Italic"
     static let medium: String = "DMSans-Medium"
-    static let mediumItalic: String = "DMSans-MediumItalic"
 }
 
 struct Fonts {

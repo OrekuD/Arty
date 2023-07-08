@@ -19,9 +19,6 @@
 		796365FE2A5A0B66002149A3 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 796365FD2A5A0B66002149A3 /* DMSans-Regular.ttf */; };
 		796366052A5A0C3B002149A3 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 796366002A5A0C3B002149A3 /* DMSans-Bold.ttf */; };
 		796366062A5A0C3B002149A3 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 796366012A5A0C3B002149A3 /* DMSans-Medium.ttf */; };
-		796366072A5A0C3B002149A3 /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 796366022A5A0C3B002149A3 /* DMSans-Italic.ttf */; };
-		796366082A5A0C3B002149A3 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 796366032A5A0C3B002149A3 /* DMSans-BoldItalic.ttf */; };
-		796366092A5A0C3B002149A3 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 796366042A5A0C3B002149A3 /* DMSans-MediumItalic.ttf */; };
 		7963660C2A5A0D5B002149A3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963660B2A5A0D5B002149A3 /* Fonts.swift */; };
 		7963660F2A5A1A3D002149A3 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963660E2A5A1A3D002149A3 /* UIScreen.swift */; };
 		796366112A5A27AF002149A3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366102A5A27AF002149A3 /* Color.swift */; };
@@ -61,9 +58,6 @@
 		796365FF2A5A0B98002149A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		796366002A5A0C3B002149A3 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		796366012A5A0C3B002149A3 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
-		796366022A5A0C3B002149A3 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
-		796366032A5A0C3B002149A3 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		796366042A5A0C3B002149A3 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		7963660B2A5A0D5B002149A3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7963660E2A5A1A3D002149A3 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		796366102A5A27AF002149A3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -124,10 +118,7 @@
 				796365FF2A5A0B98002149A3 /* Info.plist */,
 				796365FD2A5A0B66002149A3 /* DMSans-Regular.ttf */,
 				796366002A5A0C3B002149A3 /* DMSans-Bold.ttf */,
-				796366032A5A0C3B002149A3 /* DMSans-BoldItalic.ttf */,
-				796366022A5A0C3B002149A3 /* DMSans-Italic.ttf */,
 				796366012A5A0C3B002149A3 /* DMSans-Medium.ttf */,
-				796366042A5A0C3B002149A3 /* DMSans-MediumItalic.ttf */,
 				796365FB2A5A0705002149A3 /* Launch Screen.storyboard */,
 				796365D02A5978BF002149A3 /* Assets.xcassets */,
 				796365D22A5978BF002149A3 /* Preview Content */,
@@ -308,9 +299,6 @@
 			files = (
 				796365FC2A5A0705002149A3 /* Launch Screen.storyboard in Resources */,
 				796366052A5A0C3B002149A3 /* DMSans-Bold.ttf in Resources */,
-				796366072A5A0C3B002149A3 /* DMSans-Italic.ttf in Resources */,
-				796366092A5A0C3B002149A3 /* DMSans-MediumItalic.ttf in Resources */,
-				796366082A5A0C3B002149A3 /* DMSans-BoldItalic.ttf in Resources */,
 				796365D42A5978BF002149A3 /* Preview Assets.xcassets in Resources */,
 				796365D12A5978BF002149A3 /* Assets.xcassets in Resources */,
 				796365FE2A5A0B66002149A3 /* DMSans-Regular.ttf in Resources */,
