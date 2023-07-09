@@ -22,6 +22,8 @@
 		7963660C2A5A0D5B002149A3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963660B2A5A0D5B002149A3 /* Fonts.swift */; };
 		7963660F2A5A1A3D002149A3 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963660E2A5A1A3D002149A3 /* UIScreen.swift */; };
 		796366112A5A27AF002149A3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366102A5A27AF002149A3 /* Color.swift */; };
+		796366132A5AE576002149A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366122A5AE576002149A3 /* Constants.swift */; };
+		796366152A5AE691002149A3 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366142A5AE691002149A3 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		7963660B2A5A0D5B002149A3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7963660E2A5A1A3D002149A3 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		796366102A5A27AF002149A3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		796366122A5AE576002149A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		796366142A5AE691002149A3 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 			children = (
 				796365CE2A5978BD002149A3 /* ContentView.swift */,
 				796365F92A597A83002149A3 /* OnboardingScreen.swift */,
+				796366142A5AE691002149A3 /* HomeScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				7963660B2A5A0D5B002149A3 /* Fonts.swift */,
+				796366122A5AE576002149A3 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -331,6 +337,8 @@
 				796365CF2A5978BD002149A3 /* ContentView.swift in Sources */,
 				796365CD2A5978BD002149A3 /* ArtyApp.swift in Sources */,
 				796365FA2A597A83002149A3 /* OnboardingScreen.swift in Sources */,
+				796366152A5AE691002149A3 /* HomeScreen.swift in Sources */,
+				796366132A5AE576002149A3 /* Constants.swift in Sources */,
 				7963660F2A5A1A3D002149A3 /* UIScreen.swift in Sources */,
 				796366112A5A27AF002149A3 /* Color.swift in Sources */,
 			);

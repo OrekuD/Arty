@@ -68,13 +68,17 @@ struct OnboardingScreen: View {
                     .font(Fonts.callout)
                     .padding(.bottom, 46)
                 
-                Text("Go to Arty")
-                    .foregroundColor(isDarkTheme ? .black : .white)
-                    .font(Fonts.subhead)
-                    .frame(height: 54)
-                    .frame(maxWidth: .infinity)
-                    .background(isDarkTheme ? .white : .black)
-                
+                NavigationLink {
+                    HomeScreen()
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    Text("Go to Arty")
+                        .foregroundColor(isDarkTheme ? .black : .white)
+                        .font(Fonts.subhead)
+                        .frame(height: 54)
+                        .frame(maxWidth: .infinity)
+                        .background(isDarkTheme ? .white : .black)
+                }
             }
             .padding(.horizontal, 20)
             .frame(maxWidth: .infinity, alignment: .leading)
