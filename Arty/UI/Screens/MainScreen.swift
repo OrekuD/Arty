@@ -2,7 +2,7 @@
 //  MainScreen.swift
 //  Arty
 //
-//  Created by Cyboticx LLC on 09/07/2023.
+//  Created by David Opoku on 09/07/2023.
 //
 
 import SwiftUI
@@ -51,18 +51,24 @@ struct MainScreen: View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
                 HomeScreen()
+                    .ignoresSafeArea()
                     .tag(0)
                 LiveScreen()
+                    .ignoresSafeArea()
                     .tag(1)
                 StatsScreen()
+                    .ignoresSafeArea()
                     .tag(2)
                 ProfileScreen()
+                    .ignoresSafeArea()
                     .tag(3)
             }
             HStack(spacing: 10) {
                 ForEach(navigationItems) {navigationItem in
                     Button {
                         activeTab = navigationItem.tag
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
                     } label: {
                         VStack(spacing: 5) {
                             Image(activeTab == navigationItem.tag ? navigationItem.activeIconName : navigationItem.inActiveIconName)
@@ -76,7 +82,6 @@ struct MainScreen: View {
                         .padding(.top, 12)
                         .frame(width: tabWidth)
                     }
-                    
                 }
             }
             .padding(.horizontal, 20)

@@ -2,7 +2,7 @@
 //  StatsScreen.swift
 //  Arty
 //
-//  Created by Cyboticx LLC on 09/07/2023.
+//  Created by David Opoku on 09/07/2023.
 //
 
 import SwiftUI
