@@ -36,7 +36,7 @@ struct HomeScreen: View {
                 .padding(.horizontal, 20)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        ForEach(0...10, id: \.self) {item in
+                        ForEach(0...10, id: \.self) {_ in
                             VStack {
                                 Image("artwork_1")
                                     .resizable()
@@ -103,7 +103,7 @@ struct HomeScreen: View {
                                                 Text("Ends in")
                                                     .foregroundColor(.white)
                                                     .font(Fonts.body)
-                                            
+                                                
                                                 HStack(spacing: 0) {
                                                     Group {
                                                         Text("17")
@@ -152,7 +152,25 @@ struct HomeScreen: View {
                 }
                 .padding(.bottom, 20)
                 
-                Spacer()
+                
+                Text("Most Artists")
+                    .font(Fonts.title2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 20)
+                    .padding(.leading, 20)
+                    .padding(.bottom, 12)
+                
+                
+                
+                Text("Newest")
+                    .font(Fonts.title2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 44)
+                    .padding(.leading, 20)
+                    .padding(.bottom, 12)
+                
+                NFTSlides()
+                    .padding(.bottom, 20)
                 
             }
         }

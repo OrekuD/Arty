@@ -57,7 +57,7 @@ struct NFTCard: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(maxWidth: .infinity)
-        .background(Color("nft_card_background"))
+        .background(Color("card_background"))
 //        .shadow(color: .primary, radius: 1, x: -2, y: 2)
         .border(.primary, width: 2)
         .overlay {

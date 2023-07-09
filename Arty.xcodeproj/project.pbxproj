@@ -27,6 +27,7 @@
 		796366172A5B1706002149A3 /* NFTCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366162A5B1706002149A3 /* NFTCard.swift */; };
 		796366192A5B22E6002149A3 /* NFTSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366182A5B22E6002149A3 /* NFTSlides.swift */; };
 		7963661B2A5B2343002149A3 /* NFTCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963661A2A5B2343002149A3 /* NFTCollection.swift */; };
+		7963661D2A5B377C002149A3 /* ArtistCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963661C2A5B377C002149A3 /* ArtistCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		796366162A5B1706002149A3 /* NFTCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCard.swift; sourceTree = "<group>"; };
 		796366182A5B22E6002149A3 /* NFTSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTSlides.swift; sourceTree = "<group>"; };
 		7963661A2A5B2343002149A3 /* NFTCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCollection.swift; sourceTree = "<group>"; };
+		7963661C2A5B377C002149A3 /* ArtistCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				796366162A5B1706002149A3 /* NFTCard.swift */,
 				796366182A5B22E6002149A3 /* NFTSlides.swift */,
 				7963661A2A5B2343002149A3 /* NFTCollection.swift */,
+				7963661C2A5B377C002149A3 /* ArtistCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				796365CF2A5978BD002149A3 /* ContentView.swift in Sources */,
 				796366192A5B22E6002149A3 /* NFTSlides.swift in Sources */,
 				796365CD2A5978BD002149A3 /* ArtyApp.swift in Sources */,
+				7963661D2A5B377C002149A3 /* ArtistCard.swift in Sources */,
 				7963661B2A5B2343002149A3 /* NFTCollection.swift in Sources */,
 				796365FA2A597A83002149A3 /* OnboardingScreen.swift in Sources */,
 				796366152A5AE691002149A3 /* HomeScreen.swift in Sources */,
