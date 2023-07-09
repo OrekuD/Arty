@@ -25,6 +25,7 @@
 		796366132A5AE576002149A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366122A5AE576002149A3 /* Constants.swift */; };
 		796366152A5AE691002149A3 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366142A5AE691002149A3 /* HomeScreen.swift */; };
 		796366172A5B1706002149A3 /* NFTCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366162A5B1706002149A3 /* NFTCard.swift */; };
+		796366192A5B22E6002149A3 /* NFTSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366182A5B22E6002149A3 /* NFTSlides.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		796366122A5AE576002149A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		796366142A5AE691002149A3 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		796366162A5B1706002149A3 /* NFTCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCard.swift; sourceTree = "<group>"; };
+		796366182A5B22E6002149A3 /* NFTSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTSlides.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				796366162A5B1706002149A3 /* NFTCard.swift */,
+				796366182A5B22E6002149A3 /* NFTSlides.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			files = (
 				7963660C2A5A0D5B002149A3 /* Fonts.swift in Sources */,
 				796365CF2A5978BD002149A3 /* ContentView.swift in Sources */,
+				796366192A5B22E6002149A3 /* NFTSlides.swift in Sources */,
 				796365CD2A5978BD002149A3 /* ArtyApp.swift in Sources */,
 				796365FA2A597A83002149A3 /* OnboardingScreen.swift in Sources */,
 				796366152A5AE691002149A3 /* HomeScreen.swift in Sources */,

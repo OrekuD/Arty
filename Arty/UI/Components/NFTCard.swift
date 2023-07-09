@@ -2,7 +2,7 @@
 //  NFTCard.swift
 //  Arty
 //
-//  Created by Cyboticx LLC on 09/07/2023.
+//  Created by David Opoku on 09/07/2023.
 //
 
 import SwiftUI
@@ -53,13 +53,13 @@ struct NFTCard: View {
                 .padding(.bottom, 12)
                 .padding(.top, 20)
             }
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 14)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(maxWidth: .infinity)
         .background(Color("nft_card_background"))
 //        .shadow(color: .primary, radius: 1, x: -2, y: 2)
-        .border(.primary, width: 1)
+        .border(.primary, width: 2)
         .overlay {
             HStack {
                 Rectangle()
