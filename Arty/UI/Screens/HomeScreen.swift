@@ -142,7 +142,15 @@ struct HomeScreen: View {
                     .padding(.leading, 20)
                     .padding(.bottom, 12)
                 
-                NFTSlides()
+                Group {
+                    NFTSlides()
+                        .padding(.bottom, 20)
+                    
+                    NFTCollection(title: "The Face Collection")
+                    
+                    NFTCollection(title: "3D Art Collection")
+                }
+                .padding(.bottom, 20)
                 
                 Spacer()
                 
