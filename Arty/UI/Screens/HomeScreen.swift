@@ -160,7 +160,11 @@ struct HomeScreen: View {
                     .padding(.leading, 20)
                     .padding(.bottom, 12)
                 
-                
+                ForEach(0...2, id: \.self) {_ in
+                    ArtistCard()
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 20)
+                }
                 
                 Text("Newest")
                     .font(Fonts.title2)
