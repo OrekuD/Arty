@@ -174,8 +174,6 @@ struct HomeScreen: View {
                     .padding(.bottom, 12)
                 
                 NFTSlides()
-                    .padding(.bottom, 20)
-                
             }
         }
     }

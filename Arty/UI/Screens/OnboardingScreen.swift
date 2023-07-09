@@ -69,7 +69,7 @@ struct OnboardingScreen: View {
                     .padding(.bottom, 46)
                 
                 NavigationLink {
-                    HomeScreen()
+                    MainScreen()
                         .navigationBarBackButtonHidden()
                 } label: {
                     Text("Go to Arty")

@@ -28,6 +28,11 @@
 		796366192A5B22E6002149A3 /* NFTSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366182A5B22E6002149A3 /* NFTSlides.swift */; };
 		7963661B2A5B2343002149A3 /* NFTCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963661A2A5B2343002149A3 /* NFTCollection.swift */; };
 		7963661D2A5B377C002149A3 /* ArtistCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963661C2A5B377C002149A3 /* ArtistCard.swift */; };
+		7963661F2A5B5D07002149A3 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963661E2A5B5D07002149A3 /* MainScreen.swift */; };
+		796366222A5B5E4D002149A3 /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366212A5B5E4D002149A3 /* NavigationTab.swift */; };
+		796366242A5B6390002149A3 /* LiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366232A5B6390002149A3 /* LiveScreen.swift */; };
+		796366262A5B63A9002149A3 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366252A5B63A9002149A3 /* ProfileScreen.swift */; };
+		796366282A5B63BB002149A3 /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796366272A5B63BB002149A3 /* StatsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		796366182A5B22E6002149A3 /* NFTSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTSlides.swift; sourceTree = "<group>"; };
 		7963661A2A5B2343002149A3 /* NFTCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCollection.swift; sourceTree = "<group>"; };
 		7963661C2A5B377C002149A3 /* ArtistCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCard.swift; sourceTree = "<group>"; };
+		7963661E2A5B5D07002149A3 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		796366212A5B5E4D002149A3 /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
+		796366232A5B6390002149A3 /* LiveScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScreen.swift; sourceTree = "<group>"; };
+		796366252A5B63A9002149A3 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		796366272A5B63BB002149A3 /* StatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,7 @@
 		796365CB2A5978BD002149A3 /* Arty */ = {
 			isa = PBXGroup;
 			children = (
+				796366202A5B5DF8002149A3 /* Models */,
 				7963660D2A5A1A2A002149A3 /* Extensions */,
 				7963660A2A5A0D48002149A3 /* Utilities */,
 				796365F62A597A03002149A3 /* UI */,
@@ -188,7 +199,11 @@
 			children = (
 				796365CE2A5978BD002149A3 /* ContentView.swift */,
 				796365F92A597A83002149A3 /* OnboardingScreen.swift */,
+				796366272A5B63BB002149A3 /* StatsScreen.swift */,
+				7963661E2A5B5D07002149A3 /* MainScreen.swift */,
+				796366252A5B63A9002149A3 /* ProfileScreen.swift */,
 				796366142A5AE691002149A3 /* HomeScreen.swift */,
+				796366232A5B6390002149A3 /* LiveScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -209,6 +224,14 @@
 				796366102A5A27AF002149A3 /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		796366202A5B5DF8002149A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				796366212A5B5E4D002149A3 /* NavigationTab.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,13 +373,18 @@
 				796366192A5B22E6002149A3 /* NFTSlides.swift in Sources */,
 				796365CD2A5978BD002149A3 /* ArtyApp.swift in Sources */,
 				7963661D2A5B377C002149A3 /* ArtistCard.swift in Sources */,
+				7963661F2A5B5D07002149A3 /* MainScreen.swift in Sources */,
+				796366242A5B6390002149A3 /* LiveScreen.swift in Sources */,
 				7963661B2A5B2343002149A3 /* NFTCollection.swift in Sources */,
 				796365FA2A597A83002149A3 /* OnboardingScreen.swift in Sources */,
 				796366152A5AE691002149A3 /* HomeScreen.swift in Sources */,
+				796366282A5B63BB002149A3 /* StatsScreen.swift in Sources */,
 				796366132A5AE576002149A3 /* Constants.swift in Sources */,
 				7963660F2A5A1A3D002149A3 /* UIScreen.swift in Sources */,
+				796366222A5B5E4D002149A3 /* NavigationTab.swift in Sources */,
 				796366112A5A27AF002149A3 /* Color.swift in Sources */,
 				796366172A5B1706002149A3 /* NFTCard.swift in Sources */,
+				796366262A5B63A9002149A3 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
