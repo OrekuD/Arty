@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ArtistCard: View {
     @Environment(\.colorScheme) private var colorScheme;
+    @EnvironmentObject private var appViewModel: AppViewModel
     
     var isDarkMode: Bool {
         return colorScheme == .dark
@@ -24,11 +25,13 @@ struct ArtistCard: View {
                 Image("avatar_1")
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 64, height: 64)
+                    .frame(width: 48, height: 48)
                     .clipShape(Circle())
                 
                 VStack(alignment: .leading) {
                     Text("Marvin McKinney")
+                        .matchedGeometryEffect(id: "name", in: appViewModel.animation)
+                        .foregroundColor(.primary)
                         .font(Fonts.headline)
                         .lineLimit(1)
                     
@@ -37,7 +40,7 @@ struct ArtistCard: View {
                             .lineLimit(1)
                             .truncationMode(.middle)
                             .foregroundColor(Color("secondary"))
-                            .padding(.trailing, 20)
+                            .padding(.trailing, 10)
                 }
                 
                 Spacer()
@@ -48,7 +51,7 @@ struct ArtistCard: View {
                     Text("Follow")
                         .foregroundColor(isDarkMode ? .black : .white)
                         .font(Fonts.headline)
-                        .frame(width: 100, height: 44)
+                        .frame(width: 80, height: 44)
                         .background(isDarkMode ? .white : .black)
                 }
             }
@@ -73,6 +76,7 @@ struct ArtistCard: View {
                 Rectangle()
                     .frame(width: 4)
                     .offset(x: -4, y: 4)
+                    .foregroundColor(.primary)
                 Spacer()
             }
         }
@@ -82,6 +86,7 @@ struct ArtistCard: View {
                 Rectangle()
                     .frame(height: 4)
                     .offset(x: -4, y: 4)
+                    .foregroundColor(.primary)
             }
         }
     }
@@ -91,5 +96,6 @@ struct ArtistCard_Previews: PreviewProvider {
     static var previews: some View {
         ArtistCard()
             .padding(20)
+            .environmentObject(AppViewModel())
     }
 }

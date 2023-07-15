@@ -65,6 +65,7 @@ struct NFTCard: View {
                 Rectangle()
                     .frame(width: 4)
                     .offset(x: -4, y: 4)
+                    .foregroundColor(.primary)
                 Spacer()
             }
         }
@@ -74,6 +75,7 @@ struct NFTCard: View {
                 Rectangle()
                     .frame(height: 4)
                     .offset(x: -4, y: 4)
+                    .foregroundColor(.primary)
             }
         }
     }

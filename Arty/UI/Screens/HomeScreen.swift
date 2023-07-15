@@ -75,11 +75,20 @@ struct HomeScreen: View {
                     .padding(.leading, 20)
                     .padding(.bottom, 12)
                 
-                ForEach(0...2, id: \.self) {_ in
+//                ForEach(0...2, id: \.self) {_ in
+//                    ArtistCard()
+//                        .padding(.horizontal, 20)
+//                        .padding(.bottom, 20)
+//                }
+//
+                NavigationLink {
+                    ArtistProfileScreen()
+                } label: {
                     ArtistCard()
                         .padding(.horizontal, 20)
                         .padding(.bottom, 20)
                 }
+
                 
                 Text("Newest")
                     .font(Fonts.title2)
@@ -99,9 +108,10 @@ struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
             .preferredColorScheme(.dark)
+            .environmentObject(AppViewModel())
         
-        HomeScreen()
-            .preferredColorScheme(.light)
+//        HomeScreen()
+//            .preferredColorScheme(.light)
         
     }
 }

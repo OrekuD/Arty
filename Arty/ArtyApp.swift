@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ArtyApp: App {
+    @StateObject private var appViewModel: AppViewModel = AppViewModel();
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appViewModel)
         }
     }
 }
