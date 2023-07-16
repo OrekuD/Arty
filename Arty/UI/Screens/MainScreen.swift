@@ -100,8 +100,7 @@ struct MainScreen: View {
             if viewModel.isCollectionViewOpen {
                 NFTCollectionScreen()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(.red)
-                
+                .background(.background)
             }
         }
     }

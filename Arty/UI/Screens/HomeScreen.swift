@@ -50,8 +50,7 @@ struct HomeScreen: View {
                             } label: {
                                 BidCard()
                                     .frame(
-                                        width: UIScreen.screenWidth * 0.75,
-                                        height: UIScreen.screenWidth * 0.75 * 1.266
+                                        width: UIScreen.screenWidth * 0.8
                                     )
                             }
                             
@@ -75,7 +74,8 @@ struct HomeScreen: View {
                         NFTCollectionCard(nftCollection: nftCollection)
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                                    viewModel.isCollectionViewOpen.toggle()
+                                    viewModel.setSelectedNFTCollection(nftCollection: nftCollection)
+//                                    viewModel.isCollectionViewOpen.toggle()
                                 }
                             }
                     }
