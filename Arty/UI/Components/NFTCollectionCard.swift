@@ -7,16 +7,21 @@
 
 import SwiftUI
 
-struct NFTCollection: View {
-    var title: String
+struct NFTCollectionCard: View {
+//    var title: String
+    var nftCollection: NFTCollection;
+    @EnvironmentObject private var viewModel: AppViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack {
-                Text(title)
-                    .font(Fonts.largeTitle)
+                Text(nftCollection.name)
+                    .matchedGeometryEffect(id: "title-\(nftCollection.key)", in: viewModel.animation)
+                    .font(Fonts.hero)
                     .foregroundColor(.white)
                     .lineLimit(2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(.leading)
                 
                 Spacer()
                 
@@ -42,8 +47,11 @@ struct NFTCollection: View {
                 }
                 .padding(.horizontal, 10)
                 .frame(width: 160, height: 58)
-                .background(.black)
+                .background(
+                    Color.black
+                )
                 .cornerRadius(29)
+                .matchedGeometryEffect(id: "creator-view-\(nftCollection.key)", in: viewModel.animation)
             }
             .padding(.bottom, 24)
             .padding(.top, 12)
@@ -53,10 +61,11 @@ struct NFTCollection: View {
         }
         .padding(.vertical, 20)
         .background(
-            Image(Bool.random() ? "collection_background_1" : "collection_background_2")
+            Image(nftCollection.image)
                 .resizable()
                 .scaledToFill()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .matchedGeometryEffect(id: "background-\(nftCollection.key)", in: viewModel.animation)
         )
         .frame(maxWidth: .infinity)
     }
@@ -64,8 +73,13 @@ struct NFTCollection: View {
 
 struct NFTCollection_Previews: PreviewProvider {
     static var previews: some View {
-        NFTCollection(title: "The Face Collection")
-            .frame(height: 400)
-            .preferredColorScheme(.dark)
+        Button {
+            
+        } label: {
+            NFTCollectionCard(nftCollection: .init(key: "0", name: "The Face Collection", image: "collection_background_1"))
+                .frame(height: 400)
+                .preferredColorScheme(.dark)
+                .environmentObject(AppViewModel())
+        }
     }
 }

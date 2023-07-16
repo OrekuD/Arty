@@ -49,6 +49,8 @@ struct BidCard: View {
                     Text("A Geisha - Memoirs of Nothing")
                         .font(Fonts.title1)
                         .foregroundColor(.white)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
                     
                     HStack(spacing: 34) {
                         VStack(alignment: .leading, spacing: 6) {

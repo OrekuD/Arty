@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainScreen: View {
     @State private var activeTab: Int = 0;
+    @EnvironmentObject private var viewModel: AppViewModel
     
     init() {
         let transparentAppearence = UITabBarAppearance()
@@ -48,51 +49,59 @@ struct MainScreen: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            TabView(selection: $activeTab) {
-                HomeScreen()
+        ZStack {
+            VStack(spacing: 0) {
+                TabView(selection: $activeTab) {
+                    Group {
+                        HomeScreen()
+                            .tag(0)
+                        LiveScreen()
+                            .tag(1)
+                        StatsScreen()
+                            .tag(2)
+                        ProfileScreen()
+                            .tag(3)
+                    }
                     .ignoresSafeArea()
-                    .tag(0)
-                LiveScreen()
-                    .ignoresSafeArea()
-                    .tag(1)
-                StatsScreen()
-                    .ignoresSafeArea()
-                    .tag(2)
-                ProfileScreen()
-                    .ignoresSafeArea()
-                    .tag(3)
-            }
-            HStack(spacing: 10) {
-                ForEach(navigationItems) {navigationItem in
-                    Button {
-                        activeTab = navigationItem.tag
-                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                        impactMed.impactOccurred()
-                    } label: {
-                        VStack(spacing: 5) {
-                            Image(activeTab == navigationItem.tag ? navigationItem.activeIconName : navigationItem.inActiveIconName)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 28, height: 28)
-                            Text(navigationItem.name)
-                                .foregroundColor(.primary)
-                                .font(.custom(FontFamilies.medium, size: 12))
+                }
+                HStack(spacing: 10) {
+                    ForEach(navigationItems) {navigationItem in
+                        Button {
+                            activeTab = navigationItem.tag
+                            let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                            impactMed.impactOccurred()
+                        } label: {
+                            VStack(spacing: 5) {
+                                Image(activeTab == navigationItem.tag ? navigationItem.activeIconName : navigationItem.inActiveIconName)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 28, height: 28)
+                                Text(navigationItem.name)
+                                    .foregroundColor(.primary)
+                                    .font(.custom(FontFamilies.medium, size: 12))
+                            }
+                            .padding(.top, 12)
+                            .frame(width: tabWidth)
                         }
-                        .padding(.top, 12)
-                        .frame(width: tabWidth)
+                    }
+                }
+                .padding(.horizontal, 20)
+                .frame(maxWidth: .infinity)
+                .overlay {
+                    VStack {
+                        Rectangle()
+                            .frame(height: 1)
+                            .foregroundColor(Color("gray"))
+                        Spacer()
                     }
                 }
             }
-            .padding(.horizontal, 20)
-            .frame(maxWidth: .infinity)
-            .overlay {
-                VStack {
-                    Rectangle()
-                        .frame(height: 1)
-                        .foregroundColor(Color("gray"))
-                    Spacer()
-                }
+            
+            if viewModel.isCollectionViewOpen {
+                NFTCollectionScreen()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(.red)
+                
             }
         }
     }

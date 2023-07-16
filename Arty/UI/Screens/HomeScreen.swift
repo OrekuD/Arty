@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HomeScreen: View {
     @State private var searchText: String = "";
+    //    @State private var isCollectionView: Bool = false;
     @Environment(\.colorScheme) private var colorScheme;
+    @EnvironmentObject private var viewModel: AppViewModel
     
     var isDarkMode: Bool {
         return colorScheme == .dark
@@ -17,6 +19,10 @@ struct HomeScreen: View {
     
     
     var body: some View {
+        layout
+    }
+    
+    var layout: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 HStack(spacing: 20) {
@@ -34,16 +40,20 @@ struct HomeScreen: View {
                 }
                 .padding(.bottom, 20)
                 .padding(.horizontal, 20)
-                .padding(.top, 54)
+                .padding(.top, 64)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
                         ForEach(0...10, id: \.self) {_ in
-                            BidCard()
-                                .frame(
-                                    width: UIScreen.screenWidth * 0.75,
-                                    height: UIScreen.screenWidth * 0.75 * 1.266
-                                )
+                            Button {
+                                
+                            } label: {
+                                BidCard()
+                                    .frame(
+                                        width: UIScreen.screenWidth * 0.75,
+                                        height: UIScreen.screenWidth * 0.75 * 1.266
+                                    )
+                            }
                             
                         }
                     }
@@ -61,9 +71,14 @@ struct HomeScreen: View {
                     NFTSlides()
                         .padding(.bottom, 20)
                     
-                    NFTCollection(title: "The Face Collection")
-                    
-                    NFTCollection(title: "3D Art Collection")
+                    ForEach(viewModel.nftCollections) {nftCollection in
+                        NFTCollectionCard(nftCollection: nftCollection)
+                            .onTapGesture {
+                                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                                    viewModel.isCollectionViewOpen.toggle()
+                                }
+                            }
+                    }
                 }
                 .padding(.bottom, 20)
                 
@@ -75,20 +90,11 @@ struct HomeScreen: View {
                     .padding(.leading, 20)
                     .padding(.bottom, 12)
                 
-//                ForEach(0...2, id: \.self) {_ in
-//                    ArtistCard()
-//                        .padding(.horizontal, 20)
-//                        .padding(.bottom, 20)
-//                }
-//
-                NavigationLink {
-                    ArtistProfileScreen()
-                } label: {
+                ForEach(0...2, id: \.self) {_ in
                     ArtistCard()
                         .padding(.horizontal, 20)
                         .padding(.bottom, 20)
                 }
-
                 
                 Text("Newest")
                     .font(Fonts.title2)
@@ -110,8 +116,8 @@ struct HomeScreen_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
             .environmentObject(AppViewModel())
         
-//        HomeScreen()
-//            .preferredColorScheme(.light)
+        //        HomeScreen()
+        //            .preferredColorScheme(.light)
         
     }
 }

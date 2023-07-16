@@ -27,10 +27,13 @@ struct NFTCard: View {
                     .foregroundColor(Color("secondary"))
                     .padding(.top, 10)
                     .padding(.bottom, 6)
+                    .lineLimit(1)
                 
                 Text("A Geisha - Memoirs of Nothing")
                     .font(Fonts.headline)
                     .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.primary)
                 
                 HStack {
                     Image(isDarkTheme ? "etherium_white" : "etherium_black")
