@@ -46,7 +46,7 @@ struct BidCard: View {
                                     .font(Fonts.body)
                                 
                                 HStack(spacing: 2) {
-                                    Image("etherium_black")
+                                    Image("ethereum_black")
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 20, height: 20)

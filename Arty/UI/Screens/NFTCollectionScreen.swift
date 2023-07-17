@@ -10,7 +10,7 @@ import SwiftUI
 struct NFTCollectionScreen: View {
     @EnvironmentObject private var viewModel: AppViewModel;
     @Environment(\.colorScheme) private var colorScheme;
-    @State private var selectedTabIndex: Int = 0;
+    @State private var selectedTabIndex: Int = 1;
     @State private var cornerRadius: CGFloat = 0.0
     
     struct Tab: Identifiable {
@@ -50,7 +50,7 @@ struct NFTCollectionScreen: View {
                     Button {
                         withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                             viewModel.resetSelectedNFTCollection()
-//                            viewModel.isCollectionViewOpen.toggle()
+                            //                            viewModel.isCollectionViewOpen.toggle()
                         }
                     } label: {
                         Image(systemName: "xmark.circle.fill")
@@ -151,9 +151,8 @@ struct NFTCollectionScreen: View {
                 HStack(spacing: 5) {
                     ForEach(tabs) {tab in
                         Button {
-                            withAnimation {
-                                selectedTabIndex = tab.index
-                            }
+                            selectedTabIndex = tab.index
+                            
                             let impactMed = UIImpactFeedbackGenerator(style: .medium)
                             impactMed.impactOccurred()
                         } label: {
@@ -171,39 +170,140 @@ struct NFTCollectionScreen: View {
                     }
                 }
                 .padding(.bottom, 20)
-                
-                BidCard().frame(width: UIScreen.screenWidth - 40)
-                
-                Text("297 NFTs")
-                    .font(Fonts.title2)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 50)
-                    .padding(.bottom, 10)
-                
-                LazyVGrid(columns: columns) {
-                    ForEach(0...10, id: \.self) { tab in
-                        NFTCard()
-                            .padding(.bottom, 10)
-                    }
-                }
-                
             }
             .padding(.top, 10)
+            .padding(.horizontal, 20)
+            
+            VStack {
+                if selectedTabIndex == 0 {
+                    allNFTsTab
+                } else if selectedTabIndex == 1 {
+                    seeHistoryTab
+                } else {
+                    descriptionTab
+                }
+            }
             .padding(.horizontal, 20)
             
         }
         .ignoresSafeArea()
     }
+    
+    var allNFTsTab: some View {
+        VStack(spacing: 0) {
+            BidCard().frame(width: UIScreen.screenWidth - 40)
+            
+            Text("297 NFTs")
+                .font(Fonts.title2)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 50)
+                .padding(.bottom, 10)
+            
+            LazyVGrid(columns: columns) {
+                ForEach(0...10, id: \.self) { tab in
+                    NFTCard()
+                        .padding(.bottom, 10)
+                }
+            }
+        }
+    }
+    
+    var seeHistoryTab: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Text("NFTs")
+                    .font(Fonts.subhead)
+                    .foregroundColor(.primary.opacity(0.8))
+                    .frame(width: (UIScreen.screenWidth - 40) * 0.5, alignment: .leading)
+                
+                Text("Date")
+                    .font(Fonts.subhead)
+                    .foregroundColor(.primary.opacity(0.8))
+                
+                Spacer()
+                
+                Text("Price")
+                    .font(Fonts.subhead)
+                    .foregroundColor(.primary.opacity(0.8))
+            }
+            
+            ForEach(0...10, id: \.self) { _ in
+                VStack(spacing: 10) {
+                    HStack(spacing: 0) {
+                        HStack(spacing: 0) {
+                            Image("artwork_1")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 54, height: 54)
+                            
+                            Text("The Man, The Power & Fury")
+                                .font(Fonts.headline)
+                                .padding(.horizontal, 8)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(2)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .frame(width: (UIScreen.screenWidth - 40) * 0.5, alignment: .leading)
+                        
+                        Text("15 minutes")
+                            .font(Fonts.headline)
+                        Spacer()
+                        HStack(spacing: 4) {
+                            Image(isDarkMode ? "ethereum_white" : "ethereum_black")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20)
+                            
+                            Text("12.05")
+                                .font(Fonts.headline)
+                        }
+                    }
+                    HStack(spacing: 5) {
+                        Text("owned by".uppercased())
+                            .foregroundColor(.primary.opacity(0.8))
+                            .font(.custom(FontFamilies.bold, size: 13))
+                        
+                        Text("@0xBH74GFJNJU6RVJ8644H")
+                            .foregroundColor(Color("secondary"))
+                            .font(.custom(FontFamilies.bold, size: 13))
+                            .lineLimit(1)
+                            .frame(width: 130)
+                            .truncationMode(.middle)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(.vertical, 20)
+                .frame(maxWidth: .infinity)
+                .overlay {
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(.primary.opacity(0.2))
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                }
+            }
+        }
+    }
+    
+    var descriptionTab: some View {
+        Text("The Face is home to art and life, made up of 77  NFTs. The collection covers all seasons from winter to summer, with each drop adding another item to your closet.We created a collection that would go beyond the fourth dimension, away from a world where fashion narratives are lead by the top fashion houses.In our dimension, there are no rules, we are not inmates imprisoned by the rules of fashion.")
+            .font(Fonts.body)
+    }
+    
+    
+    
 }
 
 struct NFTCollectionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        NFTCollectionScreen()
-            .environmentObject(AppViewModel())
-            .preferredColorScheme(.light)
         
         NFTCollectionScreen()
             .environmentObject(AppViewModel())
             .preferredColorScheme(.dark)
+        
+        NFTCollectionScreen()
+            .environmentObject(AppViewModel())
+            .preferredColorScheme(.light)
+        
     }
 }

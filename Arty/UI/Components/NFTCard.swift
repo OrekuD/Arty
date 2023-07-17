@@ -36,7 +36,7 @@ struct NFTCard: View {
                     .foregroundColor(.primary)
                 
                 HStack {
-                    Image(isDarkTheme ? "etherium_white" : "etherium_black")
+                    Image(isDarkTheme ? "ethereum_white" : "ethereum_black")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 18)

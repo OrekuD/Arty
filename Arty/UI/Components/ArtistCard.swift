@@ -35,12 +35,12 @@ struct ArtistCard: View {
                         .font(Fonts.headline)
                         .lineLimit(1)
                     
-                        Text("@0x8272B823837367")
-                            .font(Fonts.headline)
-                            .lineLimit(1)
-                            .truncationMode(.middle)
-                            .foregroundColor(Color("secondary"))
-                            .padding(.trailing, 10)
+                    Text("@0x8272B823837367")
+                        .font(Fonts.headline)
+                        .lineLimit(1)
+                        .truncationMode(.middle)
+                        .foregroundColor(Color("secondary"))
+                        .padding(.trailing, 10)
                 }
                 
                 Spacer()
@@ -97,5 +97,11 @@ struct ArtistCard_Previews: PreviewProvider {
         ArtistCard()
             .padding(20)
             .environmentObject(AppViewModel())
+            .preferredColorScheme(.dark)
+        
+        ArtistCard()
+            .padding(20)
+            .environmentObject(AppViewModel())
+        
     }
 }
