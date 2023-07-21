@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainScreen: View {
-    @State private var activeTab: Int = 0;
+    @State private var activeTab: Int = 1;
     @EnvironmentObject private var viewModel: AppViewModel
     
     init() {
@@ -87,6 +87,7 @@ struct MainScreen: View {
                 }
                 .padding(.horizontal, 20)
                 .frame(maxWidth: .infinity)
+                .frame(height: Constants.tabBarHeight)
                 .overlay {
                     VStack {
                         Rectangle()

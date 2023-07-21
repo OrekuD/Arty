@@ -9,7 +9,16 @@ import SwiftUI
 
 struct LiveScreen: View {
     var body: some View {
-        Text("Live")
+//        ScrollView(.vertical, showsIndicators: false) {
+            LiveView()
+                .frame(
+                    width: UIScreen.screenWidth
+                )
+                .frame(
+                    maxHeight: UIScreen.screenHeight - Constants.tabBarHeight
+                )
+//        }
+//        .background(.black)
     }
 }
 
