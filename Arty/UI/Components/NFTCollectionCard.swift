@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct NFTCollectionCard: View {
-//    var title: String
     var nftCollection: NFTCollection;
-    @EnvironmentObject private var viewModel: AppViewModel
+    var hideHeader: Bool? = nil
+    @EnvironmentObject private var viewModel: AppViewModel;
+    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -54,10 +55,10 @@ struct NFTCollectionCard: View {
                 .matchedGeometryEffect(id: "creator-view-\(nftCollection.key)", in: viewModel.animation)
             }
             .padding(.bottom, 24)
-            .padding(.top, 12)
             .padding(.horizontal, 20)
             
             NFTSlides()
+                .padding(.horizontal, 20)
         }
         .padding(.vertical, 20)
         .background(
@@ -76,7 +77,7 @@ struct NFTCollection_Previews: PreviewProvider {
         Button {
             
         } label: {
-            NFTCollectionCard(nftCollection: .init(key: "0", name: "The Face Collection", image: "collection_background_1"))
+            NFTCollectionCard(nftCollection: .init(key: "0", name: "The Face Collection", image: "collection_background_1"), hideHeader: true)
                 .frame(height: 400)
                 .preferredColorScheme(.dark)
                 .environmentObject(AppViewModel())

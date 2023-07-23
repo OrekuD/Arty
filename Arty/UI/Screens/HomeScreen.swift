@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeScreen: View {
     @State private var searchText: String = "";
-    //    @State private var isCollectionView: Bool = false;
     @Environment(\.colorScheme) private var colorScheme;
     @EnvironmentObject private var viewModel: AppViewModel
     
@@ -68,14 +67,14 @@ struct HomeScreen: View {
                 
                 Group {
                     NFTSlides()
-                        .padding(.bottom, 20)
+                        .padding(.horizontal, 20)
                     
                     ForEach(viewModel.nftCollections) {nftCollection in
                         NFTCollectionCard(nftCollection: nftCollection)
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                                     viewModel.setSelectedNFTCollection(nftCollection: nftCollection)
-//                                    viewModel.isCollectionViewOpen.toggle()
+                                    //                                    viewModel.isCollectionViewOpen.toggle()
                                 }
                             }
                     }
@@ -104,6 +103,7 @@ struct HomeScreen: View {
                     .padding(.bottom, 12)
                 
                 NFTSlides()
+                    .padding(.horizontal, 20)
                     .padding(.bottom, 20)
             }
         }

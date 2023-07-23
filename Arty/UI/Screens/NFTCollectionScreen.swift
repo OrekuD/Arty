@@ -152,7 +152,6 @@ struct NFTCollectionScreen: View {
                     ForEach(tabs) {tab in
                         Button {
                             selectedTabIndex = tab.index
-                            
                             let impactMed = UIImpactFeedbackGenerator(style: .medium)
                             impactMed.impactOccurred()
                         } label: {
@@ -200,8 +199,8 @@ struct NFTCollectionScreen: View {
                 .padding(.bottom, 10)
             
             LazyVGrid(columns: columns) {
-                ForEach(0...10, id: \.self) { tab in
-                    NFTCard()
+                ForEach(viewModel.nfts) { nft in
+                    NFTCard(nft: nft)
                         .padding(.bottom, 10)
                 }
             }

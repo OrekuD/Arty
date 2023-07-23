@@ -22,9 +22,6 @@ struct PlaceBidView: View {
         (UIScreen.screenWidth - 160) / 3
     }
     
-    //    let numbers: [String] = [
-    //    ]
-    
     var columns: [GridItem] = [
         .init(.fixed((UIScreen.screenWidth - 160) / 3), spacing: 15),
         .init(.fixed((UIScreen.screenWidth - 160) / 3), spacing: 15),
@@ -90,7 +87,7 @@ struct PlaceBidView: View {
             } label: {
                 Text("Place Bid")
                     .foregroundColor(isDarkMode ? .black : .white)
-                    .font(Fonts.subhead)
+                    .font(Fonts.title3)
                     .frame(height: 54)
                     .frame(maxWidth: .infinity)
                     .background(isDarkMode ? .white : .black)

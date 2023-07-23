@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainScreen: View {
-    @State private var activeTab: Int = 1;
+    @State private var activeTab: Int = 0;
     @EnvironmentObject private var viewModel: AppViewModel
     
     init() {
@@ -53,14 +53,27 @@ struct MainScreen: View {
             VStack(spacing: 0) {
                 TabView(selection: $activeTab) {
                     Group {
-                        HomeScreen()
-                            .tag(0)
-                        LiveScreen()
-                            .tag(1)
-                        StatsScreen()
-                            .tag(2)
-                        ProfileScreen()
-                            .tag(3)
+                        //                        HomeScreen()
+                        //                            .tag(0)
+                        //                        LiveScreen()
+                        //                            .tag(1)
+                        //                        StatsScreen()
+                        //                            .tag(2)
+                        //                        ProfileScreen()
+                        //                            .tag(3)
+                        
+                        switch activeTab {
+                        case 0:
+                            HomeScreen()
+                        case 1:
+                            LiveScreen()
+                        case 2:
+                            StatsScreen()
+                        case 3:
+                            ProfileScreen()
+                        default:
+                            HomeScreen()
+                        }
                     }
                     .ignoresSafeArea()
                 }
@@ -100,8 +113,8 @@ struct MainScreen: View {
             
             if viewModel.isCollectionViewOpen {
                 NFTCollectionScreen()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(.background)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(.background)
             }
         }
     }
