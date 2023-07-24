@@ -89,6 +89,7 @@ struct NFTCard: View {
         }
         .sheet(isPresented: $isSheetVisible) {
             NFTScreen(nft: .init(name: "Test", image: "artwork_1"), isSheetVisible: $isSheetVisible)
+                .background(isDarkTheme ? .black : .white)
         }
     }
 }

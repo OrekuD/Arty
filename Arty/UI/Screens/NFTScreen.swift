@@ -130,18 +130,16 @@ struct NFTScreen: View {
                                     .padding(.bottom, 4)
                             }
                         }
-                        
-                        Group {
-                            Text("More like this")
-                                .font(Fonts.title2)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.top, 34)
-                                .padding(.bottom, 12)
-                            
-                            NFTSlides()
-                        }
+                        Text("More like this")
+                            .font(Fonts.title2)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.top, 34)
+                            .padding(.bottom, 12)
                     }
                     .padding(.horizontal, 20)
+                    
+                    
+                    NFTSlides()
                     
                     NFTCollectionCard(
                         nftCollection: .init(key: "9", name: "The Face Collection", image: "collection_background_2")
@@ -180,6 +178,7 @@ struct NFTScreen: View {
                 }
             }
             .padding(.vertical, 20)
+            .padding(.horizontal, 20)
             .padding(.horizontal, 20)
             .overlay {
                 Rectangle()

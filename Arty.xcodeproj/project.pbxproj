@@ -14,6 +14,11 @@
 		793168792A6B39D40007F66B /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793168782A6B39D30007F66B /* NFT.swift */; };
 		7931687B2A6D6C460007F66B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7931687A2A6D6C460007F66B /* ActivityView.swift */; };
 		7931687E2A6D79CD0007F66B /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 7931687D2A6D79CD0007F66B /* WrappingHStack */; };
+		793168802A6DB3BC0007F66B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7931687F2A6DB3BC0007F66B /* ProfileView.swift */; };
+		793168842A6DE1DF0007F66B /* CreatedNFTsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793168832A6DE1DF0007F66B /* CreatedNFTsView.swift */; };
+		793168862A6DE2670007F66B /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793168852A6DE2670007F66B /* ActivitiesView.swift */; };
+		793168882A6DE8A80007F66B /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793168872A6DE8A80007F66B /* Header.swift */; };
+		7931688A2A6DF4A10007F66B /* ActivitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793168892A6DF4A10007F66B /* ActivitySection.swift */; };
 		796365CD2A5978BD002149A3 /* ArtyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796365CC2A5978BD002149A3 /* ArtyApp.swift */; };
 		796365CF2A5978BD002149A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796365CE2A5978BD002149A3 /* ContentView.swift */; };
 		796365D12A5978BF002149A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796365D02A5978BF002149A3 /* Assets.xcassets */; };
@@ -70,6 +75,11 @@
 		793168762A6A090C0007F66B /* PlaceBidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceBidView.swift; sourceTree = "<group>"; };
 		793168782A6B39D30007F66B /* NFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFT.swift; sourceTree = "<group>"; };
 		7931687A2A6D6C460007F66B /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		7931687F2A6DB3BC0007F66B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		793168832A6DE1DF0007F66B /* CreatedNFTsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedNFTsView.swift; sourceTree = "<group>"; };
+		793168852A6DE2670007F66B /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		793168872A6DE8A80007F66B /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		793168892A6DF4A10007F66B /* ActivitySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySection.swift; sourceTree = "<group>"; };
 		796365C92A5978BD002149A3 /* Arty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796365CC2A5978BD002149A3 /* ArtyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtyApp.swift; sourceTree = "<group>"; };
 		796365CE2A5978BD002149A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +142,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		793168822A6DE1900007F66B /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				7931687F2A6DB3BC0007F66B /* ProfileView.swift */,
+				793168852A6DE2670007F66B /* ActivitiesView.swift */,
+				793168832A6DE1DF0007F66B /* CreatedNFTsView.swift */,
+				793168872A6DE8A80007F66B /* Header.swift */,
+				793168892A6DF4A10007F66B /* ActivitySection.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 		796365C02A5978BD002149A3 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +231,7 @@
 		796365F72A597A31002149A3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				793168822A6DE1900007F66B /* ProfileView */,
 				796366162A5B1706002149A3 /* NFTCard.swift */,
 				796366182A5B22E6002149A3 /* NFTSlides.swift */,
 				793168742A69F4C30007F66B /* MenuIcon.swift */,
@@ -416,6 +439,7 @@
 			files = (
 				7963660C2A5A0D5B002149A3 /* Fonts.swift in Sources */,
 				796365CF2A5978BD002149A3 /* ContentView.swift in Sources */,
+				793168882A6DE8A80007F66B /* Header.swift in Sources */,
 				7963662D2A5B6B6D002149A3 /* AppViewModel.swift in Sources */,
 				796366332A5B70DF002149A3 /* ArtistProfileScreen.swift in Sources */,
 				796366192A5B22E6002149A3 /* NFTSlides.swift in Sources */,
@@ -423,11 +447,15 @@
 				793168732A69EAD80007F66B /* LiveView.swift in Sources */,
 				7963661D2A5B377C002149A3 /* ArtistCard.swift in Sources */,
 				7923ECB52A634CD1004EBAFF /* NFTCollection.swift in Sources */,
+				793168862A6DE2670007F66B /* ActivitiesView.swift in Sources */,
 				7963661F2A5B5D07002149A3 /* MainScreen.swift in Sources */,
 				796366242A5B6390002149A3 /* LiveScreen.swift in Sources */,
 				7963661B2A5B2343002149A3 /* NFTCollectionCard.swift in Sources */,
+				793168842A6DE1DF0007F66B /* CreatedNFTsView.swift in Sources */,
+				793168802A6DB3BC0007F66B /* ProfileView.swift in Sources */,
 				793168772A6A090C0007F66B /* PlaceBidView.swift in Sources */,
 				796365FA2A597A83002149A3 /* OnboardingScreen.swift in Sources */,
+				7931688A2A6DF4A10007F66B /* ActivitySection.swift in Sources */,
 				7931687B2A6D6C460007F66B /* ActivityView.swift in Sources */,
 				793168792A6B39D40007F66B /* NFT.swift in Sources */,
 				796366152A5AE691002149A3 /* HomeScreen.swift in Sources */,

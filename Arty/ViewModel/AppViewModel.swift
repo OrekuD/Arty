@@ -22,9 +22,13 @@ class AppViewModel: ObservableObject {
         ]
         self.nfts = [
             .init(name: "Test 1", image: "artwork_1"),
+            .init(name: "Test 2", image: "artwork_1"),
+            .init(name: "Test 3", image: "artwork_1"),
+            .init(name: "Test 4", image: "artwork_1"),
             .init(name: "Test 1", image: "artwork_1"),
-            .init(name: "Test 1", image: "artwork_1"),
-            .init(name: "Test 1", image: "artwork_1")
+            .init(name: "Test 2", image: "artwork_1"),
+            .init(name: "Test 3", image: "artwork_1"),
+            .init(name: "Test 4", image: "artwork_1")
         ]
     }
     

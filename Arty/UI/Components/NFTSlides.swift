@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NFTSlides: View {
     @EnvironmentObject private var viewModel: AppViewModel;
+    var noPadding: Bool? = nil
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -19,8 +20,7 @@ struct NFTSlides: View {
                 }
             }
             .padding(.bottom, 12)
-//            .padding(.leading, 24)
-//            .padding(.trailing, 20)
+            .padding(.horizontal, noPadding != nil ? 0 : 20)
         }
         
     }

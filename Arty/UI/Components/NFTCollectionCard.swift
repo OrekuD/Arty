@@ -58,7 +58,6 @@ struct NFTCollectionCard: View {
             .padding(.horizontal, 20)
             
             NFTSlides()
-                .padding(.horizontal, 20)
         }
         .padding(.vertical, 20)
         .background(

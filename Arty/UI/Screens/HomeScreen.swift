@@ -67,10 +67,11 @@ struct HomeScreen: View {
                 
                 Group {
                     NFTSlides()
-                        .padding(.horizontal, 20)
+                        .padding(.bottom, 10)
                     
                     ForEach(viewModel.nftCollections) {nftCollection in
                         NFTCollectionCard(nftCollection: nftCollection)
+                            .padding(.bottom, 10)
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                                     viewModel.setSelectedNFTCollection(nftCollection: nftCollection)
@@ -103,7 +104,6 @@ struct HomeScreen: View {
                     .padding(.bottom, 12)
                 
                 NFTSlides()
-                    .padding(.horizontal, 20)
                     .padding(.bottom, 20)
             }
         }

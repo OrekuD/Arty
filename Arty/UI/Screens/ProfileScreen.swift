@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ProfileScreen: View {
     var body: some View {
-        Text("Profile")
+        ProfileView(isCurrentUserProfile: true)
     }
 }
 
 struct ProfileScreen_Previews: PreviewProvider {
     static var previews: some View {
         ProfileScreen()
+            .preferredColorScheme(.dark)
     }
 }

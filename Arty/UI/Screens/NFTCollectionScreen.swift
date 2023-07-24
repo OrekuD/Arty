@@ -10,7 +10,7 @@ import SwiftUI
 struct NFTCollectionScreen: View {
     @EnvironmentObject private var viewModel: AppViewModel;
     @Environment(\.colorScheme) private var colorScheme;
-    @State private var selectedTabIndex: Int = 1;
+    @State private var selectedTabIndex: Int = 0;
     @State private var cornerRadius: CGFloat = 0.0
     
     struct Tab: Identifiable {
@@ -38,8 +38,8 @@ struct NFTCollectionScreen: View {
     ]
     
     let columns: [GridItem] = [
-        .init(.fixed((UIScreen.screenWidth - 60) / 2), spacing: 10),
-        .init(.fixed((UIScreen.screenWidth - 60) / 2), spacing: 10)
+        .init(.fixed((UIScreen.screenWidth - 60) / 2), spacing: 20),
+        .init(.fixed((UIScreen.screenWidth - 60) / 2), spacing: 20)
     ]
     
     var body: some View {

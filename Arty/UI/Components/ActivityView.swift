@@ -47,13 +47,13 @@ struct ActivityView: View {
                     .lineLimit(1)
             }
         }
-        .padding(.vertical, 16)
+        .padding(.vertical, 14)
         .overlay {
             if index != 0 {
                 Rectangle()
                     .frame(height: 1)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                    .foregroundColor(.primary.opacity(0.2))
+                    .foregroundColor(.primary.opacity(0.1))
             }
             
         }
