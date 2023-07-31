@@ -124,10 +124,10 @@ struct ProfileView: View {
                         isMenuOpen.toggle()
                     } label: {
                         MenuIcon()
-                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
                     }
                     .padding(.trailing, 20)
                     .padding(.top, 64)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
                 }
                 Spacer()
                 VStack(spacing: 0) {
