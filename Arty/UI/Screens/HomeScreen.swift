@@ -79,6 +79,7 @@ struct HomeScreen: View {
                                 }
                             }
                     }
+                    
                 }
                 .padding(.bottom, 20)
                 
